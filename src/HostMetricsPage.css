@@ -1,0 +1,56 @@
+.metrics-charts-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem; /* space between the gauge and chart */
+    width: 100%;
+  }
+  
+  .metrics-charts-row > * {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  /* Optional: make gauges a bit smaller to balance layout */
+  .metrics-charts-row > .gauge-chart {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  
+  .metrics-charts-row > .bar-chart {
+    flex: 1;
+  }
+  /* Card wrapper for each metric section */
+.metrics-card {
+    background-color: #1a1f2b; /* Matches dark theme background */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Flex row for charts inside the card */
+  .metrics-charts-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  /* Optional: make gauge smaller and bar wider */
+  .metrics-charts-row > .gauge-chart {
+    flex: 0 0 40%;
+    max-width: 40%;
+    background-color: transparent; /* Ensure no box around gauge */
+  }
+  
+  .metrics-charts-row > .bar-chart {
+    flex: 1;
+    background-color: #1a1f2b;
+  }
+  

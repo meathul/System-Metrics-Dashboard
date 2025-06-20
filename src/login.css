@@ -1,0 +1,261 @@
+/* Background */
+.login-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: #0d2e8b url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(20,30,60,0.25), rgba(40,60,120,0.16));
+  z-index: 0;
+}
+
+/* Login Card Container - Glassmorphism */
+.login-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 700px;
+  min-height: 430px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22), 0 1.5px 8px 0 rgba(0,60,255,0.07);
+  backdrop-filter: blur(28px) saturate(160%);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  align-items: stretch;
+}
+
+/* Left Panel */
+.login-left {
+  flex: 1.1;
+  background: rgba(255,255,255,0.15);
+  padding: 44px 36px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px) saturate(140%);
+  border-right: 1.5px solid rgba(255,255,255,0.10);
+}
+
+/* Title and subtitle */
+.login-title {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #e6eaff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+}
+
+.login-subtitle {
+  margin: 0 0 30px 0;
+  font-size: 1.18rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #b8c1ec;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs - Glassy and Minimal */
+.login-input {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255,255,255,0.23);
+  color: #e6eaff;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(10px);
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+/* Make placeholder text white */
+.login-input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+/* For cross-browser support */
+.login-input:-ms-input-placeholder { color: #fff; }
+.login-input::-ms-input-placeholder { color: #fff; }
+
+/* Password wrapper alignment */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Make sure the password input takes full width inside wrapper */
+.password-wrapper .login-input {
+  width: 100%;
+  padding-right: 36px; /* Add space for the eye icon */
+  box-sizing: border-box;
+}
+
+/* Eye icon button styling */
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #b8c1ec;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: color 0.2s;
+}
+.toggle-password-btn:hover {
+  color: #3b82f6;
+}
+
+/* Button - Futuristic, Minimal, Glow */
+.login-btn {
+  margin-top: 8px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.13rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 rgba(59,130,246,0.14), 0 1.5px 8px 0 rgba(59,130,246,0.07);
+  transition: background 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.04em;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  box-shadow: 0 4px 24px 0 rgba(59,130,246,0.22);
+}
+
+/* Link - Soft Blue Accent */
+.forgot-link {
+  margin-top: 14px;
+  text-align: center;
+}
+.forgot-link a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.forgot-link a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Divider */
+.login-divider {
+  width: 2px;
+  background: #fff;
+  opacity: 0.06;
+}
+
+/* Right Panel */
+.login-right {
+  flex: 1;
+  background: radial-gradient(ellipse at 60% 40%, #23273a 80%, #181d2b 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  position: relative;
+  box-shadow: 0 0 40px 0 rgba(44, 156, 255, 0.08);
+}
+
+.smd-logo {
+  display: flex;
+  align-items: center;
+  font-size: 3.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+}
+
+.smd-text {
+  margin: 0 3px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.smd-pie {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4cc94c 0 120deg,
+    #ffd700 120deg 240deg,
+    #e74c3c 240deg 360deg
+  );
+  margin: 0 8px;
+  border: 2.5px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.13);
+  display: inline-block;
+}
+
+.smd-subtitle {
+  font-size: 1.01rem;
+  letter-spacing: 1px;
+  color: #c2c8df;
+  font-weight: 500;
+  margin-top: 8px;
+  text-align: center;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .login-container {
+    width: 96vw;
+    min-width: unset;
+  }
+}
+@media (max-width: 700px) {
+  .login-container {
+    flex-direction: column;
+    width: 96vw;
+    min-width: unset;
+    height: auto;
+  }
+  .login-left, .login-right {
+    flex: unset;
+    width: 100%;
+    padding: 32px 12px;
+  }
+  .login-right {
+    min-height: 120px;
+    border-radius: 0 0 22px 22px;
+  }
+  .login-divider {
+    display: none;
+  }
+}
